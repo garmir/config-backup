@@ -53,7 +53,7 @@ for dir in "${CONFIG_DIRS[@]}"; do
     if [ -d "$SRC_DIR" ]; then
         mkdir -p "$DEST_DIR"
         # Exclude files containing sensitive data
-        rsync -av --exclude='**/*secret*' --exclude='**/*token*' --exclude='**/*password*' "$SRC_DIR/" "$DEST_DIR/"
+        rsync -av --exclude='**/*secret*' --exclude='**/*token*' --exclude='**/*password*' --exclude='**/*client*' "$SRC_DIR/" "$DEST_DIR/"
     else
         echo "Warning: $SRC_DIR does not exist and was not copied."
     fi
