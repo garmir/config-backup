@@ -1,0 +1,96 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
+  "schemes" : [
+    {
+      "pointer" : {
+        "speed" : 0.0689655172413792768,
+        "acceleration" : 0.6875,
+        "disableAcceleration" : false
+      },
+      "scrolling" : {
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "speed" : {
+          "vertical" : 0
+        }
+      },
+      "if" : {
+        "device" : {
+          "category" : "trackpad",
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
+          "vendorID" : "0x5ac",
+          "productID" : "0x342"
+        }
+      }
+    },
+    {
+      "pointer" : {
+        "acceleration" : 1,
+        "speed" : 0.0689655172413792768,
+        "disableAcceleration" : true
+      },
+      "scrolling" : {
+        "distance" : 4,
+        "acceleration" : 1,
+        "speed" : 0,
+        "modifiers" : {
+          "vertical" : {
+            "shift" : {
+              "type" : "changeSpeed",
+              "scale" : 5
+            },
+            "command" : {
+              "type" : "pinchZoom"
+            },
+            "option" : {
+              "type" : "alterOrientation"
+            }
+          }
+        },
+        "reverse" : {
+          "horizontal" : true
+        }
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productName" : "Razer Viper Mini Signature Edition",
+          "productID" : "0x9f",
+          "vendorID" : "0x1532"
+        }
+      }
+    },
+    {
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "distance" : {
+          "vertical" : "57.6px"
+        },
+        "speed" : {
+          "vertical" : 0
+        }
+      },
+      "pointer" : {
+        "disableAcceleration" : true
+      },
+      "if" : {
+        "device" : {
+          "productID" : "0x9e",
+          "productName" : "Razer Viper Mini Signature Edition",
+          "serialNumber" : "000000000000",
+          "category" : "mouse",
+          "vendorID" : "0x1532"
+        }
+      },
+      "buttons" : {
+        "universalBackForward" : false
+      }
+    }
+  ]
+}

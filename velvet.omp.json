@@ -1,0 +1,299 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "os",
+          "style": "diamond",
+          "foreground": "#0E050F",
+          "background": "#EFDCF9",
+          "properties": {
+            "arch": "\uf303",
+            "debian": "\uf306",
+            "fedora": "\uf30a",
+            "linux": "\uf17c",
+            "macos": "\uf179",
+            "manjaro": "\uf312",
+            "opensuse": "\uf314",
+            "ubuntu": "\uf31b",
+            "windows": "\uf17a"
+          },
+          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} "
+        },
+        {
+          "type": "path",
+          "style": "powerline",
+          "foreground": "#cdd6f4",
+          "background": "#45475A",
+          "powerline_symbol": "\ue0b4",
+          "properties": {
+            "folder_icon": "\uf115",
+            "folder_separator_icon": "/",
+            "home_icon": "\uf015",
+            "max_depth": 3,
+            "style": "agnoster_short"
+          },
+          "template": " {{ .Path }} "
+        },
+        {
+          "type": "git",
+          "style": "powerline",
+          "foreground": "#cdd6f4",
+          "background": "#585b70",
+          "powerline_symbol": "\ue0b4",
+          "properties": {
+            "branch_max_length": 25,
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          },
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }} {{ if .Staging.Changed }}Staged: \uf05d {{ .Staging.String }}{{ end }} {{ if .Working.Changed }} Working: \uf044 {{ .Working.String }}{{ end }}"
+        },
+        {
+          "type": "executiontime",
+          "style": "powerline",
+          "foreground": "#cdd6f4",
+          "background": "#1e1e2e",
+          "powerline_symbol": "\ue0b4",
+          "properties": {
+            "always_enabled": true
+          },
+          "template": " \uf017 {{ .FormattedMs }} "
+        },
+        {
+          "type": "status",
+          "style": "diamond",
+          "foreground": "#cdd6f4",
+          "background": "#1e1e2e",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#f38ba8{{ else }}#cdd6f4{{ end }}"
+          ],
+          "template": " \uf071{{ if gt .Code 0 }} {{ .Code }}{{ end }} ",
+          "trailing_diamond": "\ue0b4"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "python",
+          "style": "diamond",
+          "foreground": "#a6e3a1",
+          "background": "#1e1e2e",
+          "leading_diamond": " \ue0b6",
+          "properties": {
+            "fetch_version": false
+          },
+          "template": "\uf3e2 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}",
+          "trailing_diamond": "\ue0b4"
+        },
+        {
+          "type": "go",
+          "style": "diamond",
+          "foreground": "#89b4fa",
+          "background": "#1e1e2e",
+          "leading_diamond": " \ue0b6",
+          "properties": {
+            "fetch_version": false
+          },
+          "template": "\ue626{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "trailing_diamond": "\ue0b4"
+        },
+        {
+          "type": "node",
+          "style": "diamond",
+          "foreground": "#a6e3a1",
+          "background": "#1e1e2e",
+          "leading_diamond": " \ue0b6",
+          "properties": {
+            "fetch_version": false
+          },
+          "template": "\uf898 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
+          "trailing_diamond": "\ue0b4"
+        },
+        {
+          "type": "ruby",
+          "style": "diamond",
+          "foreground": "#f38ba8",
+          "background": "#1e1e2e",
+          "leading_diamond": " \ue0b6",
+          "properties": {
+            "fetch_version": false
+          },
+          "template": "\ue791{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "trailing_diamond": "\ue0b4"
+        },
+        {
+          "type": "java",
+          "style": "diamond",
+          "foreground": "#f38ba8",
+          "background": "#1e1e2e",
+          "leading_diamond": " \ue0b6",
+          "properties": {
+            "fetch_version": false
+          },
+          "template": "\ue738{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "trailing_diamond": "\ue0b4"
+        }
+      ],
+      "type": "rprompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "time",
+          "style": "diamond",
+          "foreground": "#cdd6f4",
+          "background": "#1e1e2e",
+          "properties": {
+            "time_format": "15:04:05"
+          },
+          "template": " \uf017 {{ .CurrentDate | date .Format }} ",
+          "trailing_diamond": "\ue0b4"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "tooltips": [
+    {
+      "type": "git",
+      "tips": [
+        "git",
+        "g"
+      ],
+      "tooltip": "Git Branch: {{ .HEAD }}\nUpstream: {{ .Upstream }}\nStaged: {{ .Staging.String }}\nChanged: {{ .Working.String }}\nStashes: {{ .StashCount }}",
+      "style": "diamond",
+      "foreground": "#585b70",
+      "background": "#cdd6f4",
+      "leading_diamond": "",
+      "trailing_diamond": "",
+      "template": "{{ .HEAD }} {{ if .Staging.Changed }}Staged: \uf05d {{ .Staging.String }}{{ end }} {{ if .Working.Changed }} Working: \uf044 {{ .Working.String }}{{ end }}"
+    },
+    {
+      "type": "path",
+      "tips": [
+        "cd",
+        "ls",
+        "pwd"
+      ],
+      "tooltip": "Current Directory: {{ .Path }}",
+      "style": "powerline",
+      "foreground": "#cdd6f4",
+      "background": "#45475A",
+      "leading_diamond": "",
+      "trailing_diamond": "",
+      "template": "{{ .Path }}",
+      "properties": {
+        "max_depth": 3,
+        "home_icon": "\uf015"
+      }
+    },
+    {
+      "type": "python",
+      "tips": [
+        "python",
+        "pip"
+      ],
+      "tooltip": "Python Version: {{ .Full }}\nVirtual Env: {{ .Venv }}",
+      "style": "diamond",
+      "foreground": "#a6e3a1",
+      "background": "#1e1e2e",
+      "leading_diamond": "",
+      "trailing_diamond": "",
+      "template": "\uf3e2 {{ .Full }}{{ if .Venv }} ({{ .Venv }}){{ end }}"
+    },
+    {
+      "type": "node",
+      "tips": [
+        "node",
+        "npm",
+        "npx"
+      ],
+      "tooltip": "Node.js Version: {{ .Version }}\nUsing: {{ .PackageManager }}",
+      "style": "diamond",
+      "foreground": "#a6e3a1",
+      "background": "#1e1e2e",
+      "leading_diamond": "",
+      "trailing_diamond": "",
+      "template": "\uf898 {{ .Full }}"
+    },
+    {
+      "type": "docker",
+      "tips": [
+        "docker",
+        "docker-compose"
+      ],
+      "tooltip": "Docker Version: {{ .Version }}\nDocker is Running: {{ if .IsRunning }}Yes{{ else }}No{{ end }}",
+      "style": "diamond",
+      "foreground": "#89b4fa",
+      "background": "#1e1e2e",
+      "leading_diamond": "",
+      "trailing_diamond": "",
+      "template": "\uf308 {{ if .IsRunning }}Running{{ else }}Stopped{{ end }}"
+    },
+    {
+      "type": "go",
+      "tips": [
+        "go"
+      ],
+      "tooltip": "Go Version: {{ .Version }}",
+      "style": "diamond",
+      "foreground": "#89b4fa",
+      "background": "#1e1e2e",
+      "leading_diamond": "",
+      "trailing_diamond": "",
+      "template": "\ue626 {{ .Full }}"
+    },
+    {
+      "type": "rust",
+      "tips": [
+        "rustc",
+        "cargo"
+      ],
+      "tooltip": "Rust Version: {{ .Version }}\nCargo Installed: {{ if .Cargo }}Yes{{ else }}No{{ end }}",
+      "style": "diamond",
+      "foreground": "#f38ba8",
+      "background": "#1e1e2e",
+      "leading_diamond": "",
+      "trailing_diamond": "",
+      "template": "\ue7a8 {{ .Full }}"
+    },
+    {
+      "type": "terraform",
+      "tips": [
+        "terraform",
+        "tf"
+      ],
+      "tooltip": "Terraform Version: {{ .Version }}",
+      "style": "diamond",
+      "foreground": "#f9e2af",
+      "background": "#1e1e2e",
+      "leading_diamond": "",
+      "trailing_diamond": "",
+      "template": "\ue3b4 {{ .Full }}"
+    },
+    {
+      "type": "spotify",
+      "tips": [
+        "spotify"
+      ],
+      "tooltip": "Now Playing: {{ .Track }} by {{ .Artist }}\nAlbum: {{ .Album }}",
+      "style": "diamond",
+      "foreground": "#1DB954",
+      "background": "#1e1e2e",
+      "leading_diamond": "",
+      "trailing_diamond": "",
+      "template": "\uf1bc {{ .Track }} - {{ .Artist }}"
+    }
+  ],
+  "console_title_template": "…φ(。。*)",
+  "final_space": true,
+  "version": 2
+}

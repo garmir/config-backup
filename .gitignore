@@ -1,0 +1,10 @@
+# Ignore macOS system files
+.DS_Store
+
+# Ignore backup files
+*.backup
+
+# Ignore sensitive directories (just in case)
+dotfiles/config/gh/
+dotfiles/config/aws/
+dotfiles/config/ssh/
