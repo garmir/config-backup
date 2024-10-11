@@ -103,5 +103,5 @@ export PATH="/Users/angusm/.cargo/bin:$PATH"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
 export PATH=$JAVA_HOME/bin:$PATH
 
-eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/garmir/config-backups/refs/heads/main/velvet.omp.json')"
+eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/garmir/config-backup/refs/heads/main/velvet.omp.json')"
 
