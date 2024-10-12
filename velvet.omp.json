@@ -192,7 +192,7 @@
       "template": "{{ .Path }}",
       "properties": {
         "max_depth": 3,
-        "home_icon": "\uf015  "
+        "home_icon": "\uf015 "
       }
     },
     {
