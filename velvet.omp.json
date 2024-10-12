@@ -172,8 +172,8 @@
       "style": "diamond",
       "foreground": "#585b70",
       "background": "#cdd6f4",
-      "leading_diamond": "",
-      "trailing_diamond": "",
+      "leading_diamond": "\ue0b6",
+      "trailing_diamond": "\ue0b4",
       "template": "{{ .HEAD }} {{ if .Staging.Changed }}Staged: \uf05d {{ .Staging.String }}{{ end }} {{ if .Working.Changed }} Working: \uf044 {{ .Working.String }}{{ end }}"
     },
     {
@@ -187,8 +187,8 @@
       "style": "powerline",
       "foreground": "#cdd6f4",
       "background": "#45475A",
-      "leading_diamond": " ",
-      "trailing_diamond": " ",
+      "leading_diamond": "\ue0b6",
+      "trailing_diamond": "\ue0b4",
       "template": "{{ .Path }}",
       "properties": {
         "max_depth": 3,
@@ -205,8 +205,8 @@
       "style": "diamond",
       "foreground": "#a6e3a1",
       "background": "#1e1e2e",
-      "leading_diamond": "",
-      "trailing_diamond": "",
+      "leading_diamond": "\ue0b6",
+      "trailing_diamond": "\ue0b4",
       "template": "\uf3e2 {{ .Full }}{{ if .Venv }} ({{ .Venv }}){{ end }}"
     },
     {
@@ -220,8 +220,8 @@
       "style": "diamond",
       "foreground": "#a6e3a1",
       "background": "#1e1e2e",
-      "leading_diamond": "",
-      "trailing_diamond": "",
+      "leading_diamond": "\ue0b6",
+      "trailing_diamond": "\ue0b4",
       "template": "\uf898 {{ .Full }}"
     },
     {
@@ -234,8 +234,8 @@
       "style": "diamond",
       "foreground": "#89b4fa",
       "background": "#1e1e2e",
-      "leading_diamond": "",
-      "trailing_diamond": "",
+      "leading_diamond": "\ue0b6",
+      "trailing_diamond": "\ue0b4",
       "template": "\uf308 {{ if .IsRunning }}Running{{ else }}Stopped{{ end }}"
     },
     {
@@ -247,8 +247,8 @@
       "style": "diamond",
       "foreground": "#89b4fa",
       "background": "#1e1e2e",
-      "leading_diamond": "",
-      "trailing_diamond": "",
+      "leading_diamond": "\ue0b6",
+      "trailing_diamond": "\ue0b4",
       "template": "\ue626 {{ .Full }}"
     },
     {
@@ -261,8 +261,8 @@
       "style": "diamond",
       "foreground": "#f38ba8",
       "background": "#1e1e2e",
-      "leading_diamond": "",
-      "trailing_diamond": "",
+      "leading_diamond": "\ue0b6",
+      "trailing_diamond": "\ue0b4",
       "template": "\ue7a8 {{ .Full }}"
     },
     {
@@ -275,8 +275,8 @@
       "style": "diamond",
       "foreground": "#f9e2af",
       "background": "#1e1e2e",
-      "leading_diamond": "",
-      "trailing_diamond": "",
+      "leading_diamond": "\ue0b6",
+      "trailing_diamond": "\ue0b4",
       "template": "\ue3b4 {{ .Full }}"
     },
     {
@@ -288,8 +288,8 @@
       "style": "diamond",
       "foreground": "#1DB954",
       "background": "#1e1e2e",
-      "leading_diamond": "",
-      "trailing_diamond": "",
+      "leading_diamond": "\ue0b6",
+      "trailing_diamond": "\ue0b4",
       "template": "\uf1bc {{ .Track }} - {{ .Artist }}"
     }
   ],
