@@ -187,8 +187,8 @@
       "style": "powerline",
       "foreground": "#cdd6f4",
       "background": "#45475A",
-      "leading_diamond": "",
-      "trailing_diamond": "",
+      "leading_diamond": " ",
+      "trailing_diamond": " ",
       "template": "{{ .Path }}",
       "properties": {
         "max_depth": 3,
