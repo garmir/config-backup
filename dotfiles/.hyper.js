@@ -10,7 +10,7 @@ module.exports = {
         // default font size in pixels for all tabs
         fontSize: 12,
         // font family with optional fallbacks
-        fontFamily: '"RedditMono-Bold", "JetbrainsMono Nerd Font"',
+        fontFamily: "JetbrainsMono Nerd Font",
         // default font weight: 'normal' or 'bold'
         fontWeight: 'normal',
         // font weight for bold characters: 'normal' or 'bold'
